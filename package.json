@@ -1,0 +1,45 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "pages loader",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "page-loader": "./index.js"
+  },
+  "simple-git-hooks": {
+    "pre-push": "npx lint-staged"
+  },
+  "scripts": {
+    "prepare": "simple-git-hooks",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@jest/globals": "^30.3.0",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^17.4.0",
+    "jest": "^30.3.0",
+    "lint-staged": "^16.3.3",
+    "nock": "^14.0.15",
+    "simple-git-hooks": "^2.13.1"
+  },
+  "dependencies": {
+    "axios": "^1.17.0"
+  }
+}
